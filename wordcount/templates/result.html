@@ -1,0 +1,41 @@
+<head>
+    <style>
+        .container{
+            font-size : 30px;
+            background-color : olivedrab;
+        
+        }
+        #title{
+            color : deeppink
+        }
+
+        .container{
+            background-color : skyblue
+        }
+
+        #title1{
+            color :teal
+        }
+
+        #title2{
+            color :cornflowerblue
+        }
+    
+    
+    </style>
+
+
+
+</head>
+
+<h1><div class="containter" id="title" style="text-align: center; border: solid;"> 당신이 입력한 텍스트는 {{total}}단어로 구성되어있습니다.</h1>
+</div>
+<a href="{% url 'home'%}">다시하기</a>
+<br>
+<h2><div class="containter1" id="title1">입력한 텍스트:</h2></div>
+<div class="containter2" id="title2">{{full}}</div>
+<h2><div class="containter1" id="title1">단어 카운트:</h2></div>
+<div class="containter2" id="title2">{%for word, howmany in dictionary %}
+{{word}} : {{howmany}}<br>
+{%endfor%}
+</div>
